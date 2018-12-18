@@ -1,0 +1,62 @@
+@import './variables';
+
+body{
+  background:black;
+}
+
+.control_input{
+  position: relative;
+  padding:20px 0 0 0;
+  margin: 10px 0 0 0;
+  color:$main-orange;
+}
+.custom_label{
+  position: absolute;
+  pointer-events: none;
+  top:20px;
+  left:10px;
+  display: block;
+}
+
+
+.custom_input{
+  width:100%;
+  background-color: transparent;
+  border:none;
+  padding:10px;
+  color:#666;
+  border-bottom: 1px solid $main-orange;
+  box-sizing:content-box;
+}
+
+.custom_input:placeholder{
+  color:$main-orange;
+}
+
+.custom_input:focus{
+  outline:none;
+  transition: 0.5s;
+  border-bottom: 1px solid $second-orange;
+}
+.control_input:focus-within, .custom_input:valid ~ {
+  .custom_label{
+    font-size:12px;
+    top:5px;
+    left:0;
+    color:$second-orange;
+    transition: 0.5s;
+  }
+}
+
+.custom_button{
+  font-weight: 500;
+  background-color: $main-orange;
+  border:none;
+  padding:10px 20px;
+  color:white;
+}
+
+.custom_button:hover{
+  background-color: $second-orange;
+  transition: 0.5s;
+}
