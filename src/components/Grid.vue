@@ -35,7 +35,6 @@ export default class Grid extends Vue {
   @Prop() private data!: Array<[]>;
 
   private addToFavorite(item: object) {
-    item.favorite=true;
     this.$emit('add-to-favorite', item);
   }
   private removeFromFavorite(item: object) {
