@@ -2,6 +2,7 @@
 
 body{
   background:black;
+  color:white;
 }
 
 .control_input{
@@ -59,4 +60,33 @@ body{
 .custom_button:hover{
   background-color: $second-orange;
   transition: 0.5s;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  color:#c5c5c5;
+
+  &__header,&__cell{
+    padding:10px 15px;
+  }
+
+  &__header{
+    border-bottom:2px solid $main-orange;
+    text-align: left;
+  }
+
+  &__cell{
+    border-bottom: 1px solid $second-orange;
+  }
+}
+
+.favorite-button{
+  border:none;
+  background-color: unset;
+  i{
+    color:yellow;
+    font-size:25px;
+  }
 }
