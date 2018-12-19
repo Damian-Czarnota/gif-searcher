@@ -15,8 +15,10 @@
        <tr v-for="item in data" class="table__row">
          <td v-for="row in config" class="table__cell">
            <img :src=item[row.key] v-if="row.type==='image'" style="width:256px;height:128px">
-           <span v-if="row.type==='code'">{{item[row.key]}}</span>
-           <button v-if="row.type==='favorite'" class="favorite-button"><i v-if="!item[row.key]" class="far fa-star" @click="addToFavorite(item)"></i>
+           <span class="code" v-if="row.type==='code'">{{item[row.key]}}</span>
+           <span v-if="row.type==='text'">{{item[row.key]}}</span>
+           <button v-if="row.type==='favorite'" class="favorite-button">
+             <i v-if="!item[row.key]" class="far fa-star" @click="addToFavorite(item)"></i>
              <i v-if="item[row.key]" class="fas fa-star" @click="removeFromFavorite(item)"></i>
            </button>
          </td>
